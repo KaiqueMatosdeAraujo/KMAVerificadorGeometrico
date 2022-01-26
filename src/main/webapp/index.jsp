@@ -16,7 +16,7 @@
      <h3 style=" color:white;">Olá, para que a verificação de um "tipo" de triângulo favor digite  um valor em cada um dos campos abaixo </h3>
      <h3 style=" color:white;">Caso sejam preenchidos apenas 2 campos, a aplicação vai verificar a area de um <strong>Quadrado/Retangulo</strong></h3>
      
-  <form>
+  <form  name ="Verificador" action="ServletVerificador" method="post">
   <label style=" color:white; " for="valor1">1º Valor:</label><br>
   <input type="number"  name="valor1"><br>
   <label  style=" color:white; " for="valor2">2º Valor:</label><br>
