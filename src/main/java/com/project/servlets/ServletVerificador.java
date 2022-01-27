@@ -87,6 +87,8 @@ public class ServletVerificador extends HttpServlet {
 		}
 
 		
+		
+		// Verificador de valor  invalido 
 		if (val1 == 0 && val2 == 0 && val3 == 0){
 			response.getWriter().println("Favor, inserir valores validos.");
 		}
@@ -95,6 +97,27 @@ public class ServletVerificador extends HttpServlet {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
 		
 		
 		
