@@ -41,19 +41,64 @@ public class ServletVerificador extends HttpServlet {
 		int val2= Integer.parseInt(request.getParameter("valor2"));
 		int val3= Integer.parseInt(request.getParameter("valor3"));
 		
-		if (val1 < val2 + val3 || val2 < val1 + val3 || val3 < val1 +  val2){
+		//Verificador de Triangulo
+		if (val1 > 0 && val2> 0 && val3> 0){
+		if ((val1 < val2 + val3) ||( val2 < val1 + val3) || (val3 < val1 +  val2)){
 			response.getWriter().println("É um Triangulo.");
-			
-			
-			if (val1 == val2  && val1 == val3){
+			if ((val1 == val2)  && (val1 == val3) && (val2 == val3)){
+				
 				response.getWriter().println("TODOS os lados iguais, portanto é Triangulo Equilatero");
-				}else if (val1 == val2 || val1 == val3) {
+				}else if ((val1 == val2) || (val1 == val3) || (val2 == val3))
+	            {
+				
 					response.getWriter().println("Ele possui dois lados iguais, portanto é Triangulo Isosceles");
 				}else
-					response.getWriter().println("Ele possui todos os lados diferentes , portanto é Triangulo Escaleno");
+					
+			
+				response.getWriter().println("Ele possui todos os lados diferentes , portanto é Triangulo Escaleno");
+				
+				
+		}
+		}
+		
+		
+		
+		// Verificador de Quadrado/Retangulo
+		
+		if(val1 == 0 && val2 > 0 && val3 > 0 || val2 == 0 && val3 > 0 && val1 > 0 || val3 == 0 && val1 > 0 && val2 > 0) {
+			if(val1 == val2  || val2 == val3 || val1 == val3) {
+				response.getWriter().println("É possível calcular a área do quadrado.");
+			} else if(val1 != val2 || val2 != val3 || val1 != val3) {
+				response.getWriter().println("É possível calcular a área do retângulo.");
+			}
+			
+		
 		}
 
-	          
+		// Verificador de Reta
+		
+		
+		if(val1 == 0 && val2 == 0 && val3 > 0) {
+			response.getWriter().println("É uma reta");
+		}else if(val2 == 0 && val3 == 0 && val1 > 0 ) {
+			response.getWriter().println("É uma reta");
+		}else if(val1 == 0 && val3 == 0 && val2 > 0 ) {
+			response.getWriter().println("É uma reta");
+		}
+
+		
+		if (val1 == 0 && val2 == 0 && val3 == 0){
+			response.getWriter().println("Favor, inserir valores validos.");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		}
 	}
 
